@@ -1,0 +1,40 @@
+plot (anios, rentas, '0', Xy Y,
+xlabel ('anio')
+
+ylabel (Renta neta media (euros)')
+
+title('Evolución de la renta neta media desde 2008 hasta 2012')
+legend('Datos originales", 'Polinomio de Lagrange de grado 2')
+>
+
+anios = [2008, 2010, 2012, 2014, 2016, 2018, 20201:
+
+rentas = [28787, 29634, 27747, 26154, 26730, 28417, 306901;
+
+x1 = linspace(2008, 2012, 100);
+p_lagrange = lagrange (anios (1:3), rentas(1:3)
+yl = polyval (p_lagrange, x1);
+
+x2 = linspace(2012, 2020, 100);
+p_newton = newton (anios (3:end), rentas (3:end));
+y? = polyval (p_newton, x2):
+
+tiledlayout (1,3)
+
+nexttile
+plot(anios, rentas, '0')
+title('Datos')
+
+nextrile
+plot(xl, yl, '-')
+title('Polinomio de Lagrange")
+label ("Año")
+
+label ('Renta neta media (euros)')
+
+nexttile
+plot(x2, y2, '-')
+title('Polinomio de Newton')
+xlabel ('Año')
+
+vlabel('Renta neta media (euros)')
