@@ -6,30 +6,20 @@ public class isPrimo {
         //System.out.println("Hello world!");
 
         System.out.println("NUMEROS PRIMOS \n");
-        System.out.println("Introduce el primer valor: ");
+        System.out.println("Introduce un valor entero: ");
         int numero1 =  lectura.nextInt();
-        System.out.println("Introduce el segundo valor: ");
-        int numero2 =  lectura.nextInt();
         boolean isPrimo1 = true;
-        boolean isPrimo2 = true;
         for (int i = 2; i < numero1; i++) {
             if (numero1 % i == 0) {
                 isPrimo1 = false;
                 break;
             }
         }
-        for (int i = 2; i < numero2; i++) {
-            if (numero2 % i == 0) {
-                isPrimo2 = false;
-                break;
-            }
-        }
-        System.out.println(isPrimo1+"-"+numero1+ "---"+ isPrimo2+"-"+numero2);
-        if (!isPrimo1 || !isPrimo2){
-            System.out.println("Uno o más numeros de los introduccidos NO SON PRIMOS.");
+
+        if (!isPrimo1){
+            System.out.println("El número "+ numero1 +" NO ES PRIMO.");
         }else{
-            int resultado = numero2+ numero1;
-            System.out.println("La suma de estos dos numeros es "+resultado);
+            System.out.println("El número "+ numero1 +" ES PRIMO");
         }
     }
 
